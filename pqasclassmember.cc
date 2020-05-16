@@ -1,3 +1,6 @@
+#include <iostream>
+#include <string>
+#include <vector>
 #include <queue>
 using namespace std;
 
@@ -18,7 +21,7 @@ public:
         };
 private:
     
-    
+    // this can also be done in the ctor initialization list
     priority_queue<pp, vector<pp>,decltype(comp)> pq_{comp};    
 };
 
