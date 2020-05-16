@@ -22,6 +22,10 @@ public:
 private:
     
     // this can also be done in the ctor initialization list
+    // isto of decltype we can use std::function to provide a type of comparator
+    // or use a static calss function to for comparator
+    // reference https://stackoverflow.com/questions/16111337/declaring-a-priority-queue-in-c-with-a-custom-comparator/48587737#48587737
+    // https://stackoverflow.com/questions/39797031/defining-priority-queue-inside-a-class-with-a-custom-comparator-function
     priority_queue<pp, vector<pp>,decltype(comp)> pq_{comp};    
 };
 
